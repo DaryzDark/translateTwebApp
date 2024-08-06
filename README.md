@@ -2,7 +2,7 @@
 
 This is a Spring Boot web application. The project uses Maven for build and dependency management.
 
-## Prerequisites
+## Requirements
 
 - JDK 22 or higher
 - Docker (During the launch of the application, a working Docker engine is required)
@@ -13,9 +13,9 @@ This is a Spring Boot web application. The project uses Maven for build and depe
 
 First, clone the repository to your local machine:
 
-bash
+```bash
 git clone https://github.com/DaryzDark/translateTwebApp.git
-cd repo
+```
 
 ### Building the Application
 
@@ -24,15 +24,13 @@ You can start the application using Maven Wrapper. This ensures that the correct
 #### Using Maven Wrapper
 
 To run the application, execute:
-
-bash
+``` bash
 ./mvnw spring-boot:run
-
+```
 On Windows, use:
-
-bash
+```bash
 mvnw.cmd spring-boot:run
-
+```
 ### Running the Application
 
 Once the application is built and run, you can run acsess it from your browser using http://localhost:8080. The default port is 8080.
