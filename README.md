@@ -1,6 +1,8 @@
 # Spring Boot Translation webapp
 
-This is a Spring Boot web application. The project uses Maven for build and dependency management.
+This is a translation  web application. The project uses Maven, spring boot, docker.
+
+![alt text](image.png)
 
 ## Requirements
 
@@ -16,6 +18,15 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/DaryzDark/translateTwebApp.git
 ```
+### Quick run with Docker
+
+Use the command below and the application will most likely work. Docker will handle everything for you. You can acsess app from your browser using http://localhost:8080. 
+
+To run the application, execute:
+``` bash
+docker-compose up -d
+```
+If this method did not work, use the methods below
 
 ### Building the Application
 
@@ -25,11 +36,13 @@ You can start the application using Maven Wrapper. This ensures that the correct
 
 To run the application, execute:
 ``` bash
-./mvnw spring-boot:run
+./mvnw clean package
+docker-compose up --build
 ```
 On Windows, use:
 ```bash
-mvnw.cmd spring-boot:run
+mvnw.cmd clean package
+docker-compose up --build
 ```
 ### Running the Application
 
