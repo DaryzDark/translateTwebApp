@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordTranslation Web App </title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #282a36;
+            color: #f8f8f2;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #44475a;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        select, textarea, input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #6272a4;
+            border-radius: 5px;
+            background-color: #282a36;
+            color: #f8f8f2;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #6272a4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #44475a;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #6272a4;
+            border: 1px solid #f8f8f2;
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+        h1, h2 {
+            color: #50fa7b;
+        }
+        a {
+            color: #ff79c6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Translation Web App</h1>
+    <form id="translationForm" th:action="@{/translate}" th:object="${TranslationRequest}" method="post">
+        <div class="form-group">
+            <label for="sourceLang">Source Language:</label>
+            <select id="sourceLang" name="sourceLang" th:field="*{sourceLang}" required>
+                <option th:each="language : *{languages}"
+                        th:value="${language.language}"
+                        th:text="${language.name}">English</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="targetLang">Target Language:</label>
+            <select id="targetLang" name="targetLang" th:field="*{targetLang}" required>
+                <option th:each="language : *{languages}"
+                        th:value="${language.language}"
+                        th:text="${language.name}">English</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputText">Input Text:</label>
+            <textarea id="inputText" name="query" th:field="*{query}" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="translatedText">Translated Text:</label>
+            <textarea id="translatedText" name="response" th:field="*{response}" readonly></textarea>
+        </div>
+        <button type="submit">Translate</button>
+    </form>
+</div>
+</body>
+</html>

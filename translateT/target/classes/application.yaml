@@ -1,0 +1,16 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+  sql:
+    init:
+      mode: always
+  docker:
+    compose:
+      file: C:\Users\danie\Downloads\translateT\translateT\compose.yml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/translations
+    username: admin
+    password: adminpassword
+    driver-class-name: org.postgresql.Driver

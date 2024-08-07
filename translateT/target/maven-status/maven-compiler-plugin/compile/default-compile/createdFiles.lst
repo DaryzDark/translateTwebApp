@@ -1,0 +1,14 @@
+dev\daryz\translateT\DeepL\DeepLResponse$TranslationDeepL.class
+dev\daryz\translateT\translation\TranslationService.class
+dev\daryz\translateT\DeepL\DeepLLanguageService.class
+dev\daryz\translateT\translation\JdbcTranslationRepository.class
+dev\daryz\translateT\translation\TranslationRequest.class
+dev\daryz\translateT\translation\Translation.class
+dev\daryz\translateT\TranslateTApplication.class
+dev\daryz\translateT\translation\JdbcTranslationRepository$TranslationRowMapper.class
+dev\daryz\translateT\translation\TranslationRepository.class
+dev\daryz\translateT\DeepL\DeepLLanguageService$Language.class
+dev\daryz\translateT\translation\TranslationController.class
+dev\daryz\translateT\AppConfig.class
+dev\daryz\translateT\DeepL\DeepLTranslatorService.class
+dev\daryz\translateT\DeepL\DeepLResponse.class

@@ -1,0 +1,5 @@
+dev\daryz\translateT\translationTest\TranslationServiceTest.class
+dev\daryz\translateT\DeepLTest\DeepLLanguageServiceTest.class
+dev\daryz\translateT\TranslateTApplicationTests.class
+dev\daryz\translateT\translationTest\TranslationControllerTest.class
+dev\daryz\translateT\DeepLTest\DeepLTranslatorServiceTest.class
