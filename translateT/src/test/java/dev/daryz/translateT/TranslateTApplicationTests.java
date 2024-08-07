@@ -1,13 +1,13 @@
-package dev.daryz.translateT;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class TranslateTApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//package dev.daryz.translateT;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class TranslateTApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}

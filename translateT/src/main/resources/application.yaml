@@ -7,7 +7,7 @@ spring:
     init:
       mode: always
   datasource:
-    url: jdbc:postgresql://localhost:5432/translations
+    url: jdbc:postgresql://postgres:5432/translations
     username: admin
     password: adminpassword
     driver-class-name: org.postgresql.Driver

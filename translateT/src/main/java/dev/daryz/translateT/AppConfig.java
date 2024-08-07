@@ -5,8 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.retry.annotation.EnableRetry;
-import org.springframework.retry.support.RetryTemplate;
 import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -33,7 +31,7 @@ public class AppConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/translations");
+        dataSource.setUrl("jdbc:postgresql://postgres:5432/translations");
         dataSource.setUsername("admin");
         dataSource.setPassword("adminpassword");
         return dataSource;
